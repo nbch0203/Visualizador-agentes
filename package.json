@@ -1,0 +1,40 @@
+{
+  "name": "visualizador-agentes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Oficina pixel-art y panel en vivo para supervisar agentes y subagentes de Claude Code",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,magenta \"tsx watch server/index.ts\" \"vite\"",
+    "build": "vite build",
+    "start": "tsx server/index.ts",
+    "demo": "tsx scripts/demo.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "hooks:install": "tsx server/hooks/cli.ts install",
+    "hooks:uninstall": "tsx server/hooks/cli.ts uninstall",
+    "hooks:status": "tsx server/hooks/cli.ts status"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.6",
+    "fastify": "^5.12.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
+  }
+}

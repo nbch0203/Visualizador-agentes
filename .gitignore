@@ -1,0 +1,32 @@
+# Dependencias: se instalan con `npm ci` a partir de package-lock.json (que SÍ se sube)
+node_modules/
+
+# Build de la web: se genera con `npm run build`
+web/dist/
+
+# Salida de graphify: grafo y caché locales, con rutas absolutas de esta máquina
+graphify-out/
+
+# Configuración local de Claude Code (launch.json, settings.local.json…)
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno locales
+.env
+.env.*
+
+# Cachés de herramientas
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
